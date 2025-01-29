@@ -25,8 +25,12 @@ const HomePage = () => {
     return (
         <div>
             <ul>
-                {productsArr.map((arr) => (
-                    <li>{arr.imageUrl}</li>
+                {productsArr.map((product, index) => (
+                    <div key={index}>
+                        <img src={product.imageUrl}/>
+                        <h2>{product.title}</h2>
+                        <p>Price: ${product.price}</p>
+                    </div>
                 ))}
             </ul>
         </div>
